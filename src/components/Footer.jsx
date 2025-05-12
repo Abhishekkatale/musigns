@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import Logo from '../assets/logoo.png';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,8 +10,11 @@ function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="/" className="font-montserrat font-bold text-xl tracking-wider">MUSIGNS</a>
-          </div>
+          <img 
+              src={Logo} 
+              alt="Studio Musigns Logo" 
+              className="h-10 max-w-[200px] object-contain"
+            />          </div>
 
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-gray-400">© {currentYear} Musitech. All rights reserved.</p>

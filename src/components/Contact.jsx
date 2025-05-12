@@ -96,7 +96,7 @@ function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Interested in collaborating with us? Contact Musigns to discuss your project requirements or to schedule a consultation with our team.
+              Interested in collaborating with us? Contact Studio Musigns to discuss your project requirements or to schedule a consultation with our team.
             </motion.p>
             
             <motion.div 

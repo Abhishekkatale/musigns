@@ -27,7 +27,7 @@ function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              ABOUT MUSIGNS
+              ABOUT STUDIO MUSIGNS
               <span className="block w-20 h-1 bg-black mt-4"></span>
             </motion.h2>
             
@@ -38,7 +38,7 @@ function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Founded by Krushna Sanas in 2018, Musigns is an architectural studio driven by the philosophy that design should balance aesthetic minimalism with functional excellence.
+              Founded by Krushna Sanas in 2018, Studio Musigns is an architectural studio driven by the philosophy that design should balance aesthetic minimalism with functional excellence.
             </motion.p>
             
             <motion.p 

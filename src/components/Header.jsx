@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from '../assets/logo.png';
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,7 +8,6 @@ function Navigation() {
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Prevent scrolling when menu is open
     document.body.style.overflow = !isMenuOpen ? 'hidden' : 'auto';
   };
 
@@ -18,11 +18,7 @@ function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,10 +37,14 @@ function Navigation() {
           : "bg-transparent py-6"
       }`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="/" className="font-montserrat font-bold text-2xl tracking-wider text-black">
-            MUSIGNS
-          </a>
-
+          {/* Logo with controlled sizing and clarity */}
+          <div className="flex items-center">
+            <img 
+              src={Logo} 
+              alt="Studio Musigns Logo" 
+              className="h-10 max-w-[200px] object-contain"
+            />
+          </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 text-sm tracking-wider">
@@ -84,7 +84,6 @@ function Navigation() {
               <span className="relative z-10 transition-colors hover:text-white">CONTACT</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
             </a>
-            
           </div>
           
           {/* Mobile Menu Toggle */}
